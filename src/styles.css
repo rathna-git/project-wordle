@@ -219,6 +219,12 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.keyboard{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /*
   Keyframe animations
 */

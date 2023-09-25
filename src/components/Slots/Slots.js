@@ -13,8 +13,6 @@ function Slots({guess, answer}){
         return guess ? `cell guess ? ${status[num]['status']}` : 'cell';
     }
 
-  
-
     return(
         
         <>  
