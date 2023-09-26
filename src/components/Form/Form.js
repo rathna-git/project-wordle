@@ -19,7 +19,7 @@ function Form({handleGuessSubmit,  gameStatus}){
              id="guess-input" 
              type="text" 
              pattern="[A-Za-z]{5}" 
-             title="Please enter a 5 letter world 💖"
+             title="Please enter a 5 letter word 💖"
              autoComplete="off"
              value = {guess}
              disabled = {gameStatus !== 'running'}
