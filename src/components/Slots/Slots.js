@@ -1,32 +1,23 @@
 import React from 'react';
 import { range } from '../../utils';
-import {checkGuess} from '../../../src/game-helpers';
 
+function Cell({letter, status}) {
+    const className = status ? `cell ${status}` : 'cell';
 
-function Slots({guess, answer}){
+    return <span className={className}>{letter}</span>;
+}
 
-    const status = checkGuess(guess, answer);
-    console.log(status);
-
-  
-    function spanClass(num) {
-        return guess ? `cell guess ? ${status[num]['status']}` : 'cell';
-    }
-
+function Slots({guess}){
     return(
-        
-        <>  
             <p className='guess'>   
-            {range(5).map((num) => (
-                <>
-                <span key={num} className={spanClass(num)} >
-                    {guess ? status[num]['letter'] : undefined}
-                </span>               
-                </>
-            ))}
-            </p>
-        </>
-        
+                {range(5).map((num) => (
+                    <Cell
+                    key = {num}
+                    letter={guess ? guess[num].letter : undefined}
+                    status={guess ? guess[num].status : undefined}
+                    />                
+                ))}
+            </p>  
     )
 }
 

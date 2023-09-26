@@ -15,6 +15,8 @@ html {
   --color-gray-500: hsl(0deg 0% 50%);
   --color-gray-700: hsl(0deg 0% 75%);
   --color-gray-900: hsl(0deg 0% 90%);
+  --color-gray-970: hsl(0deg 0% 97%);
+
 }
 
 /*
@@ -224,6 +226,46 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.key{
+  
+    position: relative;
+ 
+    width: 9%;
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    background: var(--color-gray-970);
+    border: 2px solid var(--color-gray-700);
+    border-radius: var(--radius);
+    font-size: 1.2rem;
+
+}
+
+.key_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 3px;
+  place-content: center;
+}
+
+
+.key.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+.key.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
+}
+.key.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
 }
 /*
   Keyframe animations

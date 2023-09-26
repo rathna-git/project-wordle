@@ -1,8 +1,12 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 
-function LoseBanner({answer}) {
-  return(<Banner status="sad">
+function LoseBanner({answer, handleRestart}) {
+  return(
+  <Banner 
+    status="sad"
+    action={handleRestart}
+    actionText="Restart game">
  
   <p>Sorry, the correct answer is <strong>{answer}</strong>.</p>
 
