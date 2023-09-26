@@ -231,15 +231,14 @@ h1 {
 .key{
   
     position: relative;
- 
-    width: 9%;
+    width: 8%;
     display: grid;
     place-content: center;
     aspect-ratio: 1 / 1;
     background: var(--color-gray-970);
     border: 2px solid var(--color-gray-700);
     border-radius: var(--radius);
-    font-size: 1.2rem;
+    font-size: 1rem;
 
 }
 
