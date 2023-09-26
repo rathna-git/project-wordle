@@ -18,9 +18,6 @@ function Game() {
   const [inputs, setInputs] = React.useState([]);
   const [status, setStatus] = React.useState('running');
 
-
-  console.info({ answer });
-
   function handleGuessSubmit(guess){
     if(guess !== ''){
       const newGuess = [...inputs, guess]    
