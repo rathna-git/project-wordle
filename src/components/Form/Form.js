@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Form({handleGuessSubmit,  gameStatus}){
     const [ guess, setGuess ] = React.useState('');
     
@@ -7,11 +8,9 @@ function Form({handleGuessSubmit,  gameStatus}){
         <>
         <form 
             className ="guess-input-wrapper"
-            onSubmit = { (event) => {
-                
+            onSubmit = { (event) => {    
                 event.preventDefault();
                 handleGuessSubmit(guess);
-                console.log({guess});
                 setGuess('');
             }}
         >
@@ -21,6 +20,7 @@ function Form({handleGuessSubmit,  gameStatus}){
              type="text" 
              pattern="[A-Za-z]{5}" 
              title="Please enter a 5 letter world 💖"
+             autoComplete="off"
              value = {guess}
              disabled = {gameStatus !== 'running'}
              onChange = {(event) => {
