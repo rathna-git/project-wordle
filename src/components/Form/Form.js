@@ -17,7 +17,9 @@ function Form({handleGuessSubmit,  gameStatus}){
              <label htmlFor="guess-input">Enter guess:</label>
              <input 
              id="guess-input" 
-             type="text" 
+             type="text"
+             minLength={5} 
+             maxLength={5}
              pattern="[A-Za-z]{5}" 
              title="Please enter a 5 letter word 💖"
              autoComplete="off"
